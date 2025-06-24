@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>แบบร้องเรียนและประเมินความพึงพอใจ</title>
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Sarabun', sans-serif;
+            background: #e8f0fe;
+            padding: 2rem;
+        }
+
+        form {
+            background: white;
+            max-width: 800px;
+            margin: auto;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        h1,
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        label {
+            font-weight: 600;
+            display: block;
+            margin: 1rem 0 0.3rem;
+        }
+
+        textarea,
+        select,
+        input[type="text"] {
+            width: 100%;
+            padding: .6rem;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 1rem;
+        }
+
+        .checkbox-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .radio-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin: .5rem 0;
+        }
+
+        .section {
+            margin-top: 2rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+
+        th,
+        td {
+            text-align: center;
+            padding: 0.6rem;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            margin-top: 2rem;
+            padding: 1rem;
+            width: 100%;
+            background: #007bff;
+            color: white;
+            font-size: 1rem;
+            border: none;
+            border-radius: 6px;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+            transform: scale(1.03);
+            transition: all 0.2s ease;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <form method="POST"
+        action="https://script.google.com/macros/s/AKfycbxSQuqJxA4ta9zXl2kyMsRgu0efRW6wXLYaKpT28uYBJpeLPSWKlnBgTsG8HCImg_Y5Wg/exec">
+        <h1>แบบร้องเรียนและประเมินความพึงพอใจ</h1>
+        <p style="text-align:center; font-size: 1.2rem; font-weight: 600;" id="driver-name">
+            ผู้ขับขี่: <span style="color:#007bff;">กำลังโหลด...</span>
+        </p>
+
+
+
+        <div class="section">
+            <h2>ประเด็นร้องเรียน</h2>
+            <div class="checkbox-grid">
+                <label><input type="checkbox" value="เก็บค่าโดยสารเกินอัตรา"> เก็บค่าโดยสารเกินอัตรา</label>
+                <label><input type="checkbox" value="พฤติกรรม/วาจาไม่สุภาพ"> พฤติกรรม/วาจาไม่สุภาพ</label>
+                <label><input type="checkbox" value="ขับรถเร็ว"> ขับรถเร็ว</label>
+                <label><input type="checkbox" value="ขับย้อนศร"> ขับย้อนศร</label>
+                <label><input type="checkbox" value="ฝ่าไฟแดง"> ฝ่าไฟแดง</label>
+                <label><input type="checkbox" value="จอดรถขวางทาง"> จอดรถขวางทาง</label>
+                <label><input type="checkbox" value="ขับบนทางเท้า"> ขับบนทางเท้า</label>
+                <label><input type="checkbox" value="แต่งกายไม่เหมาะสม"> แต่งกายไม่เหมาะสม</label>
+                <label><input type="checkbox" value="พื้นที่วินไม่เป็นระเบียบ"> พื้นที่วินไม่เป็นระเบียบ</label>
+            </div>
+            <label>รายละเอียดเพิ่มเติม</label>
+            <textarea rows="3" id="complaint-detail"></textarea>
+        </div>
+
+        <div class="section">
+            <h2>ข้อมูลผู้ร้องเรียน</h2>
+            <label>ชื่อเรียกแทน/ชื่อเล่น</label>
+            <input type="text" name="name">
+            <label>หมายเลขโทรศัพท์</label>
+            <input type="text" name="phone">
+        </div>
+
+        <div class="section">
+            <h2>แบบสอบถาม</h2>
+            <label>เพศ</label>
+            <div class="radio-group">
+                <label><input type="radio" name="gender" value="ชาย">ชาย</label>
+                <label> <input type="radio" name="gender" value="หญิง">หญิง</label>
+            </div>
+
+            <label>อายุ</label>
+            <div class="radio-group">
+                <label><input type="radio" name="age" value="ไม่เกิน 18 ปี">ไม่เกิน 18 ปี</label>
+                <label><input type="radio" name="age" value="19 - 25 ปี"> 19 - 25 ปี</label>
+                <label><input type="radio" name="age" value="26 - 39 ปี"> 26 - 39 ปี</label>
+                <label><input type="radio" name="age" value="40 - 59 ปี<"> 40 - 59 ปี</label>
+                <label><input type="radio" name="age" value="60 ปีขึ้นไป"> 60 ปีขึ้นไป</label>
+            </div>
+
+            <label>ความถี่ในการใช้บริการ (ต่อสัปดาห์)</label>
+            <div class="radio-group">
+                <label><input type="radio" name="frequency" value="5 – 6 วัน"> 5 – 6 วัน</label>
+                <label><input type="radio" name="frequency" value="3 – 4 วัน"> 3 – 4 วัน</label>
+                <label><input type="radio" name="frequency" value="1 – 2 วัน"> 1 – 2 วัน</label>
+                <label><input type="radio" name="frequency" value="แล้วแต่โอกาส"> แล้วแต่โอกาส</label>
+            </div>
+
+            <div class="section">
+                <h2>ระดับความคิดเห็น</h2>
+                <table>
+                    <tr>
+                        <th style="text-align:left">คำถาม</th>
+                        <th>5</th>
+                        <th>4</th>
+                        <th>3</th>
+                        <th>2</th>
+                        <th>1</th>
+                    </tr>
+                    <tr>
+                        <td>ฉันรู้สึกมั่นใจเมื่อใช้บริการรถจักรยานยนต์สาธารณะในเขตคลองสามวา</td>
+                        <td><input type="radio" name="q1" value="5"></td>
+                        <td><input type="radio" name="q1" value="4"></td>
+                        <td><input type="radio" name="q1" value="3"></td>
+                        <td><input type="radio" name="q1" value="2"></td>
+                        <td><input type="radio" name="q1" value="1"></td>
+                    </tr>
+                    <tr>
+                        <td>ฉันเชื่อว่าผู้ขับขี่ในพื้นที่ปฏิบัติตามกฎความปลอดภัย</td>
+                        <td><input type="radio" name="q2" value="5"></td>
+                        <td><input type="radio" name="q2" value="4"></td>
+                        <td><input type="radio" name="q2" value="3"></td>
+                        <td><input type="radio" name="q2" value="2"></td>
+                        <td><input type="radio" name="q2" value="1"></td>
+                    </tr>
+                    <tr>
+                        <td>ผู้ขับขี่สวมหมวกกันน็อค และมีให้ผู้โดยสาร</td>
+                        <td><input type="radio" name="q3" value="5"></td>
+                        <td><input type="radio" name="q3" value="4"></td>
+                        <td><input type="radio" name="q3" value="3"></td>
+                        <td><input type="radio" name="q3" value="2"></td>
+                        <td><input type="radio" name="q3" value="1"></td>
+                    </tr>
+                    <tr>
+                        <td>ผู้ขับขี่มีความเร็วที่เหมาะสมและปลอดภัย</td>
+                        <td><input type="radio" name="q4" value="5"></td>
+                        <td><input type="radio" name="q4" value="4"></td>
+                        <td><input type="radio" name="q4" value="3"></td>
+                        <td><input type="radio" name="q4" value="2"></td>
+                        <td><input type="radio" name="q4" value="1"></td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="section">
+                <h2>ระดับความพึงพอใจ</h2>
+                <table>
+                    <tr>
+                        <th style="text-align:left">ประเด็น</th>
+                        <th>5</th>
+                        <th>4</th>
+                        <th>3</th>
+                        <th>2</th>
+                        <th>1</th>
+                    </tr>
+                    <tr>
+                        <td>นวัตกรรมใช้งานง่าย</td>
+                        <td><input type="radio" name="s1" value="5"></td>
+                        <td><input type="radio" name="s1" value="4"></td>
+                        <td><input type="radio" name="s1" value="3"></td>
+                        <td><input type="radio" name="s1" value="2"></td>
+                        <td><input type="radio" name="s1" value="1"></td>
+                    </tr>
+                    <tr>
+                        <td>ข้อมูลของนวัตกรรมครบถ้วน</td>
+                        <td><input type="radio" name="s2" value="5"></td>
+                        <td><input type="radio" name="s2" value="4"></td>
+                        <td><input type="radio" name="s2" value="3"></td>
+                        <td><input type="radio" name="s2" value="2"></td>
+                        <td><input type="radio" name="s2" value="1"></td>
+                    </tr>
+                    <tr>
+                        <td>QR Code ที่วินมองเห็นได้ชัดเจน</td>
+                        <td><input type="radio" name="s3" value="5"></td>
+                        <td><input type="radio" name="s3" value="4"></td>
+                        <td><input type="radio" name="s3" value="3"></td>
+                        <td><input type="radio" name="s3" value="2"></td>
+                        <td><input type="radio" name="s3" value="1"></td>
+                    </tr>
+                    <tr>
+                        <td>QR Code ที่เสื้อวินมองเห็นได้ชัดเจน</td>
+                        <td><input type="radio" name="s4" value="5"></td>
+                        <td><input type="radio" name="s4" value="4"></td>
+                        <td><input type="radio" name="s4" value="3"></td>
+                        <td><input type="radio" name="s4" value="2"></td>
+                        <td><input type="radio" name="s4" value="1"></td>
+                    </tr>
+                    <tr>
+                        <td>รู้สึกเชื่อมั่นมากขึ้นต่อการใช้บริการจักรยานยนต์สาธารณะ</td>
+                        <td><input type="radio" name="s5" value="5"></td>
+                        <td><input type="radio" name="s5" value="4"></td>
+                        <td><input type="radio" name="s5" value="3"></td>
+                        <td><input type="radio" name="s5" value="2"></td>
+                        <td><input type="radio" name="s5" value="1"></td>
+                    </tr>
+                </table>
+            </div>
+
+            <!-- ส่วนซ่อนไว้ แต่ต้องใส่ name ด้วย -->
+            <input type="text" id="name" name="name" hidden />
+            <input type="text" id="phone" name="phone" hidden />
+            <textarea id="complaint-detail" name="details" hidden></textarea>
+
+            <button type="submit">ส่งแบบฟอร์ม</button>
+
+    </form>
+</body>
+
+<script>
+    window.addEventListener("DOMContentLoaded", () => {
+        const form = document.getElementById("survey-form");
+        const urlParams = new URLSearchParams(window.location.search);
+        const driverId = urlParams.get("id");
+
+        form.addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const getValue = name => {
+                const radios = document.getElementsByName(name);
+                for (let r of radios) {
+                    if (r.checked) return r.value;
+                }
+                return "";
+            };
+
+            const payload = {
+                employeeId: driverId || "",
+                name: document.getElementById("name").value || "",
+                phone: document.getElementById("phone").value || "",
+                gender: getValue("gender"),
+                age: getValue("age"),
+                frequency: getValue("frequency"),
+                complaints: Array.from(document.querySelectorAll("input[type='checkbox']:checked")).map(cb => cb.value),
+                details: document.getElementById("complaint-detail").value || "",
+                q1: getValue("q1"),
+                q2: getValue("q2"),
+                q3: getValue("q3"),
+                q4: getValue("q4"),
+                s1: getValue("s1"),
+                s2: getValue("s2"),
+                s3: getValue("s3"),
+                s4: getValue("s4"),
+                s5: getValue("s5")
+            };
+
+            const formData = new FormData();
+            for (let key in payload) {
+                formData.append(key, Array.isArray(payload[key]) ? payload[key].join(", ") : payload[key]);
+            }
+
+            fetch("https://script.google.com/macros/s/AKfycbxSQuqJxA4ta9zXl2kyMsRgu0efRW6wXLYaKpT28uYBJpeLPSWKlnBgTsG8HCImg_Y5Wg/exec", {
+                method: "POST",
+                body: formData,
+                mode: "no-cors"
+            });
+
+            alert("ส่งแบบฟอร์มเรียบร้อยแล้ว ขอบคุณค่ะ 💖");
+            form.reset();
+        });
+    });
+</script>
+
+
+</html>
